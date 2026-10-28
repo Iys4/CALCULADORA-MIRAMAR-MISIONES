@@ -1,0 +1,6 @@
+{
+  "name": "Calculadora Celeste | Simulador de Descenso Miramar Misiones",
+  "description": "Simulador interactivo de la Tabla de Promedios y descenso para Miramar Misiones con análisis What-If y Monte Carlo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

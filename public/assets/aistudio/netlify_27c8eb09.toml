@@ -1,0 +1,21 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# Regla de Redirección SPA: Evita errores 404 en rutas directas o recargas de página
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Control de caché para datos en vivo (siempre frescos)
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Control de caché para bundles versionados
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
